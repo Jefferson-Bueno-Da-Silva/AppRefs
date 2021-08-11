@@ -1,10 +1,6 @@
 import React, { forwardRef, useCallback, useState, useImperativeHandle } from 'react';
 
-export interface ModalHandles {
-  OpenModal: () => void
-}
-
-const Modal: React.ForwardRefRenderFunction<ModalHandles> = (props, ref) => {
+const Modal = (props, ref) => {
   const [ visible, setVisible ] = useState(false)
 
   const OpenModal = useCallback(() => {

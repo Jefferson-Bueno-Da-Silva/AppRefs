@@ -1,8 +1,8 @@
 import React, { useCallback, useRef } from 'react'
-import Modal, { ModalHandles } from './components/Modal'
+import Modal from './components/Modal.js'
 
 function App() {
-  const modalRef = useRef<ModalHandles>(null)
+  const modalRef = useRef(null)
 
   const handleOpenModal = useCallback(() => {
     modalRef.current?.OpenModal()
@@ -11,7 +11,6 @@ function App() {
   return (
     <div>
       <button onClick={handleOpenModal}>Abrir modal</button>
-
       <Modal ref={modalRef} />
     </div>
   )
